@@ -27,7 +27,7 @@ class MapSample extends StatefulWidget {
 class MapSampleState extends State<MapSample> {
   // ignore: unused_field
 
-  LatLng currentLacation = LatLng(13.7607218, 100.4501806);
+  LatLng currentLacation = LatLng(13.7607218, 100.450180);
   // ignore: unused_field
   GoogleMapController _mapController;
   @override
