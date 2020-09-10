@@ -116,7 +116,7 @@ class _State extends State<LoginPage> {
                     child: RaisedButton(
                       textColor: Colors.black,
                       color: Colors.white,
-                      child: Text('ดำเนินการต่อด้วย Apple ID'),
+                      child: Text('ดำเนินการต่อด้วย Apple IกกกกกกD'),
                       onPressed: () {},
                     )),
               ],
