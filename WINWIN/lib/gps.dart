@@ -5,19 +5,19 @@ import 'package:flutter/material.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
 import 'package:geolocator/geolocator.dart';
 
-class MyApp extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return MaterialApp(
-      debugShowCheckedModeBanner: false,
-      title: 'Flutter Google Maps Demo',
-      theme: ThemeData(
-        primarySwatch: Colors.green,
-      ),
-      home: MapSample(),
-    );
-  }
-}
+// class MyApp extends StatelessWidget {
+//   @override
+//   Widget build(BuildContext context) {
+//     return MaterialApp(
+//       debugShowCheckedModeBanner: false,
+//       title: 'Flutter Google Maps Demo',
+//       theme: ThemeData(
+//         primarySwatch: Colors.green,
+//       ),
+//       home: MapSample(),
+//     );
+//   }
+// }
 
 class MapSample extends StatefulWidget {
   @override
@@ -32,7 +32,7 @@ class MapSampleState extends State<MapSample> {
   GoogleMapController _mapController;
   @override
   Widget build(BuildContext context) {
-    return new Scaffold(
+    return Scaffold(
       body: Column(
         children: [
           Expanded(
@@ -81,6 +81,7 @@ class MapSampleState extends State<MapSample> {
             ),
           ),
           Expanded(
+              // eiei
               //แถบด้านล่าง
               child: Column(
             children: [
@@ -106,7 +107,7 @@ class MapSampleState extends State<MapSample> {
                         padding: const EdgeInsets.only(
                             top: 10, bottom: 10, right: 40),
                         child: Text(
-                          "ชั้นจะไปตลาด",
+                          "หิว",
                           style: TextStyle(fontSize: 18),
                         ),
                       ),
