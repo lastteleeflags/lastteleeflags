@@ -4,6 +4,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
 import 'package:geolocator/geolocator.dart';
+import 'package:WINWIN/drawsetting.dart';
 
 // class MyApp extends StatelessWidget {
 //   @override
@@ -26,13 +27,29 @@ class MapSample extends StatefulWidget {
 
 class MapSampleState extends State<MapSample> {
   // ignore: unused_field
+  @override
+  // Future _createMarkerImageFromAsset(BuildContext context) async {
+  //   if (_markerIcon == null) {
+  //     ImageConfiguration configuration = ImageConfiguration();
+  //     BitmapDescriptor bmpd = await BitmapDescriptor.fromAssetImage(
+  //         configuration, 'assets/images/ic_airport.png');
+  //     setState(() {
+  //       _markerIcon = bmpd;
+  //     });
+  //   }
+  // }
 
-  LatLng currentLacation = LatLng(13.7607218, 100.450180);
+  LatLng currentLacation = LatLng(13.7832245, 100.558656);
   // ignore: unused_field
   GoogleMapController _mapController;
   @override
   Widget build(BuildContext context) {
+    // _createMarkerImageFromAsset(context);
     return Scaffold(
+      appBar: AppBar(
+        backgroundColor: Colors.black,
+      ),
+      drawer: SettingBar(),
       body: Column(
         children: [
           Expanded(
@@ -40,6 +57,16 @@ class MapSampleState extends State<MapSample> {
             child: Stack(
               children: <Widget>[
                 GoogleMap(
+                  markers: {
+                    Marker(
+                        markerId: MarkerId("1"),
+                        // icon: _markerIcon,
+                        position: LatLng(13.7790104, 100.5570799),
+                        infoWindow: InfoWindow(
+                            title: "วินมอเตอร์ไซค์",
+                            snippet: "หน้าทางเข้ามหาลัยจักรพงษ์")),
+                  },
+
                   initialCameraPosition:
                       CameraPosition(target: currentLacation, zoom: 14.8),
                   myLocationEnabled: true,
@@ -47,24 +74,25 @@ class MapSampleState extends State<MapSample> {
                   // zoomControlsEnabled: false,
                   //
                 ),
-                Positioned(
-                  top: 40,
-                  left: 10,
-                  child: Container(
-                    child: new IconButton(
-                        icon: new Icon(Icons.arrow_back),
-                        onPressed: () {
-                          // Navigator.push(
-                          //     context,
-                          //     MaterialPageRoute(
-                          //         builder: (context) => myhome()));
-                        }),
+                // Positioned(
+                //   top: 40,
+                //   left: 10,
+                //   child: Container(
+                //     child: new IconButton(
+                //         icon: new Icon(Icons.arrow_back),
+                //         onPressed: () {
+                //           // Navigator.push(
+                //           //     context,
+                //           //     MaterialPageRoute(
+                //           //         builder: (context) => myhome()));
+                //         }),
 
-                    // child: Icon(
-                    //   Icons.arrow_back,
-                    //   size: 28,
-                  ),
-                ),
+                //     // child: Icon(
+                //     //   Icons.arrow_back,
+                //     //   size: 28,
+                //   ),
+                // ),
+
                 Positioned(
                     bottom: 10,
                     right: 10,
@@ -102,12 +130,12 @@ class MapSampleState extends State<MapSample> {
                     //     child: Text("?????"),
                     //   ),
                     // ),
+                    //
                     Container(
                       child: Padding(
-                        padding: const EdgeInsets.only(
-                            top: 10, bottom: 10, right: 40),
+                        padding: EdgeInsets.fromLTRB(120, 10, 120, 10),
                         child: Text(
-                          "หิว",
+                          "Start",
                           style: TextStyle(fontSize: 18),
                         ),
                       ),

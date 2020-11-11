@@ -16,6 +16,7 @@ class _State extends State<LoginPage> {
         appBar: AppBar(
           title: Text('Win Win'),
         ),
+
         //backgroundColor: const Color(0xFF0277BD),
         body: Padding(
             padding: EdgeInsets.all(10),
@@ -116,7 +117,7 @@ class _State extends State<LoginPage> {
                     child: RaisedButton(
                       textColor: Colors.black,
                       color: Colors.white,
-                      child: Text('ดำเนินการต่อด้วย Apple IกกกกกกD'),
+                      child: Text('ดำเนินการต่อด้วย Apple '),
                       onPressed: () {},
                     )),
               ],
