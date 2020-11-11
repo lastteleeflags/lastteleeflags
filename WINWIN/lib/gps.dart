@@ -27,24 +27,25 @@ class MapSample extends StatefulWidget {
 
 class MapSampleState extends State<MapSample> {
   // ignore: unused_field
+  BitmapDescriptor _markerIcon;
   @override
-  // Future _createMarkerImageFromAsset(BuildContext context) async {
-  //   if (_markerIcon == null) {
-  //     ImageConfiguration configuration = ImageConfiguration();
-  //     BitmapDescriptor bmpd = await BitmapDescriptor.fromAssetImage(
-  //         configuration, 'assets/images/ic_airport.png');
-  //     setState(() {
-  //       _markerIcon = bmpd;
-  //     });
-  //   }
-  // }
+  Future _createMarkerImageFromAsset(BuildContext context) async {
+    if (_markerIcon == null) {
+      ImageConfiguration configuration = ImageConfiguration();
+      BitmapDescriptor bmpd = await BitmapDescriptor.fromAssetImage(
+          configuration, 'assets/images/ic_airport.png');
+      setState(() {
+        _markerIcon = bmpd;
+      });
+    }
+  }
 
   LatLng currentLacation = LatLng(13.7832245, 100.558656);
   // ignore: unused_field
   GoogleMapController _mapController;
   @override
   Widget build(BuildContext context) {
-    // _createMarkerImageFromAsset(context);
+    _createMarkerImageFromAsset(context);
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Colors.black,

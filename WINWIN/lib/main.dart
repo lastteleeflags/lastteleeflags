@@ -1,6 +1,6 @@
 import "package:flutter/material.dart";
 import 'app_example/Login_Screen.dart';
-// import 'package:WINWIN/terms_service.dart/help.dart';
+import 'package:WINWIN/terms_service.dart/help.dart';
 
 void main() => runApp(MyApp());
 

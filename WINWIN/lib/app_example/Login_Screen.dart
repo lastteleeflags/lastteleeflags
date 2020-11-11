@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-
+import 'package:WINWIN/terms_service.dart/help.dart';
 import '../gps.dart';
 
 class LoginPage extends StatefulWidget {
@@ -73,7 +73,7 @@ class _State extends State<LoginPage> {
                       onPressed: () {
                         Navigator.push(
                           context,
-                          MaterialPageRoute(builder: (context) => MapSample()),
+                          MaterialPageRoute(builder: (context) => Help()),
                         );
 
                         //print(nameController.text);
